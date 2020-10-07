@@ -126,7 +126,7 @@ export const Menu = styled.ul`
       background-color: var(--color-light-white);
       opacity: 1;
       pointer-events: initial;
-      transition: all 1s;
+      transition: all 0.4s;
       top: 102px;
       right: 0;
       padding: 1rem 2rem;

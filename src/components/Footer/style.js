@@ -44,13 +44,13 @@ export const Container = styled.footer`
     > input {
       background: var(--color-light-white);
       margin-bottom: 0.3rem;
-      border-radius: 0;
+      border-radius: 0.3rem;
     }
 
     > button {
       width: 100%;
       background-color: var(--color-main-blue);
-      border-radius: 0;
+      border-radius: 0.2rem;
       margin: 0;
     }
   }

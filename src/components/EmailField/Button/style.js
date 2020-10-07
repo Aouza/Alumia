@@ -10,7 +10,9 @@ export const Container = styled.button`
   @media (max-width: 32rem) {
     width: 100%;
     background-color: var(--color-main-orange);
-    border-radius: 0;
+    border-radius: 0.2rem;
     margin: 0;
+    height: auto;
+    padding: 1rem;
   }
 `;
