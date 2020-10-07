@@ -22,7 +22,7 @@ export const Container = styled.header`
 
 export const MenuButton = styled.button`
   background-color: var(--color-main-orange);
-  padding: 1rem 2rem;
+  padding: 0.6rem 1.4rem;
   border-radius: 0.2rem;
   color: #fff;
   box-shadow: 2px 2px 2px var(--box-shadow-light);
@@ -40,9 +40,7 @@ export const MenuButton = styled.button`
   ${({ mobileButton }) =>
     mobileButton &&
     css`
-      width: 4rem;
-      height: 4rem;
-      padding: 0;
+      padding: 0.6rem 1.4rem;
       transition: all 0.4s;
     `}
 `;

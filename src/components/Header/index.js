@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdClearAll, MdClose } from "react-icons/md";
+import { MdMenu, MdClose } from "react-icons/md";
 import useMedia from "../../hooks/useMedia";
 import LogoImage from "../../assets/images/alumia-logo-laranja.png";
 import { menuItems } from "../../services/api";
@@ -21,7 +21,7 @@ const Header = () => {
             type="button"
             onClick={() => setMobileActive(!mobileActive)}
           >
-            {mobileActive ? <MdClose /> : <MdClearAll />}
+            {mobileActive ? <MdClose /> : <MdMenu />}
           </MenuButton>
         )}
         <Menu mobileButton={mobileActive} mobileWindow={isMobile}>
