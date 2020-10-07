@@ -17,6 +17,10 @@ export const Container = styled.header`
     align-items: center;
     justify-content: space-between;
     height: 100%;
+
+    @media (max-width: 72rem) {
+      max-width: 40rem;
+    }
   }
 `;
 
@@ -25,7 +29,6 @@ export const MenuButton = styled.button`
   padding: 0.6rem 1.4rem;
   border-radius: 0.2rem;
   color: #fff;
-  /* box-shadow: 2px 2px 2px var(--box-shadow-light); */
   cursor: pointer;
   transition: all 0.4s;
 
