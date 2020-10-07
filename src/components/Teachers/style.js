@@ -24,9 +24,10 @@ export const Container = styled.div`
     margin: 1rem 0 0.3rem 0;
     font-size: 0.7rem;
     text-align: left;
-    background-color: var(--color-main-blue);
+    background-color: var(--color-opacity-blue);
+    color: var(--color-main-orange);
+    font-weight: 600;
     padding: 0.2rem 1rem;
-    color: var(--color-light-white);
     border-radius: 10rem;
     width: fit-content;
 
@@ -41,8 +42,9 @@ export const Container = styled.div`
   }
 
   > h3 {
+    font-size: 1rem;
     @media (max-width: 72rem) {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
   }
 `;

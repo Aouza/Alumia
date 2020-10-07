@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { MdMenu, MdClose } from "react-icons/md";
 import useMedia from "../../hooks/useMedia";
 import LogoImage from "../../assets/images/alumia-logo-laranja.png";
@@ -14,7 +15,11 @@ const Header = () => {
   return (
     <Container>
       <nav>
-        <Logo src={LogoImage} alt="Alumia" />
+        <Logo
+          src={LogoImage}
+          alt="Alumia"
+          onClick={() => scroll.scrollToTop()}
+        />
         {isMobile && (
           <MenuButton
             mobileButton={mobileActive}
@@ -27,7 +32,16 @@ const Header = () => {
         <Menu mobileButton={mobileActive} mobileWindow={isMobile}>
           {menuItems.map(({ value }) => (
             <li key={value}>
-              <a href="!#">{value}</a>
+              <Link
+                activeClass="active"
+                to={value}
+                spy={true}
+                smooth={true}
+                offset={-140}
+                duration={500}
+              >
+                {value}
+              </Link>
             </li>
           ))}
         </Menu>

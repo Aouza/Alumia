@@ -50,6 +50,7 @@ export const MenuButton = styled.button`
 
 export const Logo = styled.img`
   width: 9rem;
+  cursor: pointer;
 `;
 
 export const Menu = styled.ul`
@@ -57,32 +58,17 @@ export const Menu = styled.ul`
 
   > li {
     font-size: 1rem;
-    color: #333;
+
+    .active {
+      color: var(--color-main-blue);
+    }
 
     > a {
       color: var(--color-main-orange);
       position: relative;
       font-weight: 700;
       font-size: 0.9rem;
-
-      &::after {
-        content: "";
-        width: 6px;
-        height: 6px;
-        background-color: var(--color-main-blue);
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        border-radius: 50%;
-        display: inline-block;
-        position: absolute;
-        right: -8px;
-        bottom: -8px;
-        opacity: 0;
-        transition: 0.4s opacity;
-      }
-
-      &:hover::after {
-        opacity: 1;
-      }
+      cursor: pointer;
 
       &::before {
         content: "";
@@ -93,7 +79,7 @@ export const Menu = styled.ul`
         border-radius: 10px;
         opacity: 0;
         position: relative;
-        top: -5px;
+
         transition: 0.6s width;
       }
 
@@ -123,7 +109,7 @@ export const Menu = styled.ul`
     css`
       width: 15rem;
       display: block;
-      height: 15.4rem;
+      height: 12rem;
       overflow: hidden;
       position: absolute;
       background-color: var(--color-light-white);
@@ -145,8 +131,7 @@ export const Menu = styled.ul`
           padding: 0.6rem;
           display: block;
 
-          &:hover::before,
-          &:hover::after {
+          &:hover::before {
             opacity: 0;
           }
         }

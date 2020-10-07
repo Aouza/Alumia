@@ -1,9 +1,15 @@
+import PerfilImageOne from "../assets/images/perfil-1.jpg";
+import PerfilImageTwo from "../assets/images/perfil-2.jpg";
+import PerfilImageThree from "../assets/images/perfil-3.jpg";
+import PerfilImageFour from "../assets/images/perfil-4.jpg";
+
+console.log(PerfilImageOne);
+
 export const menuItems = [
-  { value: "Curso" },
+  { value: "Alumia" },
   { value: "Objetivo" },
   { value: "Informações" },
   { value: "Disciplinas" },
-  { value: "Professores" },
 ];
 
 export const disciplinesGroup = [
@@ -82,7 +88,7 @@ export const disciplinesGroup = [
     ],
   },
   {
-    title: "MARKETING DIGITAl",
+    title: "MARKETING DIGITAL",
     disciplines: ["Marketing Digital", "SEO", "Social Media"],
   },
   {
@@ -98,4 +104,11 @@ export const disciplinesGroup = [
       "Digital & Agile Thinking",
     ],
   },
+];
+
+export const teachers = [
+  { name: "Salles Gomes", photo: PerfilImageOne },
+  { name: "Lucas Mendes", photo: PerfilImageThree },
+  { name: "Aline Freitas", photo: PerfilImageTwo },
+  { name: "Marco Rangel", photo: PerfilImageFour },
 ];

@@ -44,7 +44,7 @@ export const Container = styled.footer`
     > input {
       background: var(--color-light-white);
       margin-bottom: 0.3rem;
-      border-radius: 0.3rem;
+      border-radius: 0.2rem;
     }
 
     > button {
@@ -65,11 +65,12 @@ export const Wrapper = styled.div`
 
 export const LogoFooter = styled.img`
   width: 8rem;
+  cursor: pointer;
 `;
 
 export const MenuFooter = styled.ul`
   > h3 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: var(--color-light-white);
     margin-bottom: 0.6rem;
   }
@@ -78,7 +79,7 @@ export const MenuFooter = styled.ul`
     a {
       padding: 0.4rem 0;
       display: block;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #fff;
       opacity: 0.9;
     }
@@ -87,7 +88,7 @@ export const MenuFooter = styled.ul`
 
 export const InfosFooter = styled.ul`
   > h3 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: var(--color-light-white);
     margin-bottom: 0.6rem;
   }
@@ -95,7 +96,7 @@ export const InfosFooter = styled.ul`
   > p {
     padding: 0.4rem 0;
     display: block;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #fff;
     opacity: 0.9;
     margin-bottom: 1rem;
@@ -103,5 +104,21 @@ export const InfosFooter = styled.ul`
     > small {
       color: var(--color-light-white);
     }
+  }
+`;
+
+export const EndPage = styled.div`
+  background-color: var(--color-main-blue);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > p {
+    color: var(--color-light-white);
+    font-size: 0.8rem;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 0.1rem;
+    line-height: 1.4;
   }
 `;

@@ -7,8 +7,8 @@ const ContentDiscipline = ({ title, disciplines }) => {
     <Container>
       <h2>{title}</h2>
       <ul>
-        {disciplines.map((item) => (
-          <li>{item}</li>
+        {disciplines.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </Container>

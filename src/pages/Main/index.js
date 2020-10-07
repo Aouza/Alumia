@@ -6,7 +6,7 @@ import LearningImage from "../../assets/images/learning-svg.svg";
 import EmailField from "../../components/EmailField";
 import IconsInfo from "../../components/IconsInfo";
 import Price from "../../components/Price";
-import { disciplinesGroup } from "../../services/api";
+import { disciplinesGroup, teachers } from "../../services/api";
 
 import {
   Container,
@@ -22,7 +22,7 @@ import ContentDiscipline from "../../components/ContentDiscipline";
 const Main = () => {
   return (
     <>
-      <Container>
+      <Container id="Alumia">
         <Wrapper>
           <Calling>
             <h1>Alumia</h1>
@@ -38,7 +38,7 @@ const Main = () => {
         </Wrapper>
       </Container>
 
-      <CourseResume>
+      <CourseResume id="Objetivo">
         <Wrapper>
           <h2>Análise e Desenvolvimento de Sistemas.</h2>
           <p>
@@ -52,23 +52,23 @@ const Main = () => {
             altamente qualificados.
           </p>
           <div>
-            <Teachers />
-            <Teachers />
-            <Teachers />
-            <Teachers />
+            {teachers.map(({ name, photo }) => (
+              <Teachers key={name} photo={photo} name={name} />
+            ))}
           </div>
 
           <Form>
             <h3>Fique por dentro</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam vel
-              perspiciatis culpa aliquam beatae placeat.
+              Você não pode ficar de fora das nossas promoções, dicas e
+              novidades. <br />
+              Queremos estar cada vez mais perto de você!
             </p>
           </Form>
         </Wrapper>
       </CourseResume>
 
-      <Details>
+      <Details id="Informações">
         <Wrapper>
           <div>
             <IconsInfo>
@@ -91,7 +91,7 @@ const Main = () => {
           </Price>
         </Wrapper>
       </Details>
-      <Discipline>
+      <Discipline id="Disciplinas">
         <Wrapper>
           <div>
             <h3>O que você irá aprender</h3>
@@ -100,7 +100,11 @@ const Main = () => {
 
           <div>
             {disciplinesGroup.map(({ title, disciplines }) => (
-              <ContentDiscipline title={title} disciplines={disciplines} />
+              <ContentDiscipline
+                key={title}
+                title={title}
+                disciplines={disciplines}
+              />
             ))}
           </div>
         </Wrapper>
