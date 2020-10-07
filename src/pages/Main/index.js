@@ -16,7 +16,6 @@ import {
   Details,
   Discipline,
 } from "./style";
-import Divisor from "../../components/Divisor";
 import ContentDiscipline from "../../components/ContentDiscipline";
 
 const Main = () => {
