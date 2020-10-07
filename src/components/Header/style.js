@@ -21,11 +21,11 @@ export const Container = styled.header`
 `;
 
 export const MenuButton = styled.button`
-  background-color: var(--color-main-orange);
+  background-color: var(--color-light-white);
   padding: 0.6rem 1.4rem;
   border-radius: 0.2rem;
   color: #fff;
-  box-shadow: 2px 2px 2px var(--box-shadow-light);
+  /* box-shadow: 2px 2px 2px var(--box-shadow-light); */
   cursor: pointer;
   transition: all 0.4s;
 
@@ -33,7 +33,7 @@ export const MenuButton = styled.button`
     font-size: 1.8rem;
 
     > path {
-      color: var(--color-light-white);
+      color: var(--color-main-blue);
     }
   }
 
