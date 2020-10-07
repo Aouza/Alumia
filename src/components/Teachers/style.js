@@ -14,6 +14,10 @@ export const Container = styled.div`
     width: 6rem;
     margin: 0 auto;
     border-radius: 100%;
+
+    @media (max-width: 72rem) {
+      width: 4rem;
+    }
   }
 
   > span {
@@ -25,5 +29,20 @@ export const Container = styled.div`
     color: var(--color-light-white);
     border-radius: 10rem;
     width: fit-content;
+
+    @media (max-width: 72rem) {
+      font-size: 0.6rem;
+    }
+
+    @media (max-width: 42rem) {
+      grid-template-columns: 1fr 1fr;
+      margin: 0.6rem auto;
+    }
+  }
+
+  > h3 {
+    @media (max-width: 72rem) {
+      font-size: 0.9rem;
+    }
   }
 `;

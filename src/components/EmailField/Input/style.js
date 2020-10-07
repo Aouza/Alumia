@@ -5,4 +5,10 @@ export const Container = styled.input`
 
   width: 100%;
   flex: 2;
+
+  @media (max-width: 32rem) {
+    background: var(--color-border);
+    margin-bottom: 0.3rem;
+    border-radius: 0;
+  }
 `;

@@ -5,7 +5,9 @@ export const Container = styled.header`
   box-shadow: 0px 1px 5px var(--box-shadow-light);
   height: 100px;
   position: sticky;
+  z-index: 1000;
   top: 0;
+
   > nav {
     max-width: 70rem;
     width: 100%;
@@ -109,7 +111,7 @@ export const Menu = styled.ul`
     css`
       opacity: 0;
       overflow: hidden;
-
+      pointer-events: none;
       position: absolute;
     `}
 
@@ -124,6 +126,7 @@ export const Menu = styled.ul`
       position: absolute;
       background-color: var(--color-light-white);
       opacity: 1;
+      pointer-events: initial;
       transition: all 1s;
       top: 102px;
       right: 0;

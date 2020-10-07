@@ -6,6 +6,14 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 72rem) {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 42rem) {
+    margin-bottom: 4rem;
+  }
+
   > svg {
     font-size: 2.4rem;
     margin-bottom: 0.6rem;
@@ -22,5 +30,9 @@ export const Container = styled.div`
     margin-top: 2rem;
     text-align: center;
     line-height: 1.6;
+
+    @media (max-width: 72rem) {
+      padding: 0;
+    }
   }
 `;

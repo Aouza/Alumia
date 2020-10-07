@@ -19,6 +19,11 @@ input, button{
     border: 0;
     outline: none;
     background: none;
+    font-weight: bold;
+}
+
+button{
+    cursor: pointer;
 }
 
 a{

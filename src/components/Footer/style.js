@@ -5,8 +5,21 @@ export const Container = styled.footer`
   padding: 5rem 0;
 
   & > div {
+    max-width: 70rem;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1.5fr;
+
+    @media (max-width: 72rem) {
+      max-width: 40rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4rem 0;
+    }
+
+    @media (max-width: 42rem) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   & > div > form {
@@ -18,6 +31,15 @@ export const Container = styled.footer`
     padding: 0 3rem;
     margin: 0;
     height: fit-content;
+
+    @media (max-width: 72rem) {
+      grid-column: 1 / 4;
+      padding: 0;
+    }
+
+    @media (max-width: 42rem) {
+      grid-column: initial;
+    }
 
     > input {
       background: var(--color-light-white);
