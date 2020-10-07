@@ -29,6 +29,7 @@ export const Calling = styled.div`
   padding: 5rem 2rem 5rem 0;
 
   @media (max-width: 72rem) {
+    padding: 1rem 2rem 5rem 0;
   }
 
   > h1 {
@@ -83,7 +84,7 @@ export const CourseResume = styled.div`
       }
 
       @media (max-width: 42rem) {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       &::after {

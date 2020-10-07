@@ -113,6 +113,7 @@ export const Menu = styled.ul`
       overflow: hidden;
       pointer-events: none;
       position: absolute;
+      display: block;
     `}
 
   ${({ mobileButton, mobileWindow }) =>
