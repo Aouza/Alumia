@@ -82,6 +82,7 @@ export const MenuFooter = styled.ul`
       font-size: 0.8rem;
       color: #fff;
       opacity: 0.9;
+      cursor: pointer;
     }
   }
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import { animateScroll as scroll } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import EmailField from "../EmailField";
 import LogoImageFooter from "../../assets/images/alumia-logo-branco.png";
 
@@ -28,7 +28,15 @@ const Footer = () => {
             <h3>MENU</h3>
             {menuItems.map(({ value }) => (
               <li key={value}>
-                <a href="!#">{value}</a>
+                <Link
+                  to={value}
+                  spy={true}
+                  smooth={true}
+                  offset={-140}
+                  duration={500}
+                >
+                  {value}
+                </Link>
               </li>
             ))}
           </MenuFooter>
