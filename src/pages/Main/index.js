@@ -6,6 +6,7 @@ import LearningImage from "../../assets/images/learning-svg.svg";
 import EmailField from "../../components/EmailField";
 import IconsInfo from "../../components/IconsInfo";
 import Price from "../../components/Price";
+import { disciplinesGroup } from "../../services/api";
 
 import {
   Container,
@@ -98,16 +99,9 @@ const Main = () => {
           </div>
 
           <div>
-            <ContentDiscipline />
-            <ContentDiscipline />
-            <ContentDiscipline />
-            <ContentDiscipline />
-            <ContentDiscipline />
-
-            <ContentDiscipline />
-            <ContentDiscipline />
-            <ContentDiscipline />
-            <ContentDiscipline />
+            {disciplinesGroup.map(({ title, disciplines }) => (
+              <ContentDiscipline title={title} disciplines={disciplines} />
+            ))}
           </div>
         </Wrapper>
       </Discipline>

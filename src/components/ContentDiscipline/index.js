@@ -2,14 +2,15 @@ import React from "react";
 
 import { Container } from "./style";
 
-const ContentDiscipline = () => {
+const ContentDiscipline = ({ title, disciplines }) => {
   return (
     <Container>
-      <h2>Título</h2>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga assumenda
-        blanditiis.
-      </p>
+      <h2>{title}</h2>
+      <ul>
+        {disciplines.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
     </Container>
   );
 };
