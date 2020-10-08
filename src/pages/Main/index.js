@@ -72,14 +72,14 @@ const Main = () => {
         <Wrapper>
           <div>
             <IconsInfo>
-              <FaClock />
+              <FaCalendarCheck />
               <p>
                 Previsão para início das aulas <br></br>
                 <span>19/10/2020</span>
               </p>
             </IconsInfo>
             <IconsInfo>
-              <FaCalendarCheck />
+              <FaClock />
               <p>
                 Mais de 100 horas <br></br>
                 <span>De conteúdo exclusivo.</span>

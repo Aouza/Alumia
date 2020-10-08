@@ -1,15 +1,43 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
+import axios from "axios";
 import Button from "../Form/Button";
 import Input from "../Form/Input";
 
 import { Container } from "./style";
 
 const Form = ({ children }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = useCallback(
+    async (e) => {
+      e.preventDefault();
+
+      await axios.post("http://localhost:3001/email-name-send", {
+        name,
+        email,
+      });
+    },
+    [name, email]
+  );
+
   return (
-    <Container>
+    <Container onSubmit={handleSubmit}>
       {children}
-      <Input type="name" name="name" id="name" placeholder="Seu nome" />
-      <Input type="email" name="email" id="email" placeholder="Seu email" />
+      <Input
+        type="name"
+        name="name"
+        id="name"
+        placeholder="Seu nome"
+        onChange={({ target }) => setName(target.value)}
+      />
+      <Input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Seu email"
+        onChange={({ target }) => setEmail(target.value)}
+      />
       <Button value="Enviar" />
     </Container>
   );

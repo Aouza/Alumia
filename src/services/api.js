@@ -3,8 +3,6 @@ import PerfilImageTwo from "../assets/images/perfil-2.jpg";
 import PerfilImageThree from "../assets/images/perfil-3.jpg";
 import PerfilImageFour from "../assets/images/perfil-4.jpg";
 
-console.log(PerfilImageOne);
-
 export const menuItems = [
   { value: "Alumia" },
   { value: "Objetivo" },

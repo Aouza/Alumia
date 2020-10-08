@@ -29,7 +29,8 @@ export const Calling = styled.div`
   padding: 5rem 2rem 5rem 0;
 
   @media (max-width: 72rem) {
-    padding: 1rem 2rem 5rem 0;
+    padding: 0;
+    padding-bottom: 5rem;
   }
 
   > h1 {

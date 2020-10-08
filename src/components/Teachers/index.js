@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "./style";
 
 const Teachers = ({ name, photo }) => {
-  console.log(photo);
   return (
     <Container>
       <img src={photo} alt={name} />
