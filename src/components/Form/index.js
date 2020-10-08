@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import axios from "axios";
 import Button from "../Form/Button";
 import Input from "../Form/Input";
@@ -8,21 +8,29 @@ import { Container } from "./style";
 const Form = ({ children }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const formRef = useRef();
 
   const handleSubmit = useCallback(
     async (e) => {
       e.preventDefault();
 
+      setLoading(true);
       await axios.post("http://localhost:3001/email-name-send", {
         name,
         email,
       });
+      setLoading(false);
+      setName("");
+      setEmail("");
+      formRef.current.reset();
     },
     [name, email]
   );
 
   return (
-    <Container onSubmit={handleSubmit}>
+    <Container ref={formRef} onSubmit={handleSubmit}>
       {children}
       <Input
         type="name"
@@ -38,7 +46,11 @@ const Form = ({ children }) => {
         placeholder="Seu email"
         onChange={({ target }) => setEmail(target.value)}
       />
-      <Button value="Enviar" />
+      {loading ? (
+        <Button disabled value="Enviando..." />
+      ) : (
+        <Button value="Enviar" />
+      )}
     </Container>
   );
 };

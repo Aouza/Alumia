@@ -51,9 +51,11 @@ app.post("/email-send", (req, res) => {
     })
     .then((response) => {
       console.log(`E-mail enviado com sucesso: ${response}`);
+      return res.status(200).send(response);
     })
     .catch((err) => {
       console.log(`Aconteceu algum erro ${err}`);
+      return res.status(400).send(err);
     });
 });
 
@@ -88,7 +90,7 @@ app.post("/email-name-send", (req, res) => {
                     font-size: 1rem;
                     font-weight: bold;
                     ">
-                    <li >${name}</li>
+                    <li>${name}</li>
                     <li>${email}</li>
                   </ul>
           </div>
@@ -99,9 +101,11 @@ app.post("/email-name-send", (req, res) => {
     })
     .then((response) => {
       console.log(`E-mail enviado com sucesso: ${response}`);
+      return res.status(200).send(response);
     })
     .catch((err) => {
       console.log(`Aconteceu algum erro ${err}`);
+      return res.status(400).send(err);
     });
 });
 
