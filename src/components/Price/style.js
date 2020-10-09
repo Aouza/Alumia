@@ -14,7 +14,7 @@ export const Container = styled.div`
       position: absolute;
       bottom: -35px;
 
-      @media (max-width: 42rem) {
+      @media (max-width: 32rem) {
         position: initial;
       }
     }

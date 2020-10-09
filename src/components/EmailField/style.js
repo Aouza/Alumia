@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
@@ -13,6 +13,15 @@ export const Container = styled.div`
     margin: 3rem 2rem 2rem 0;
     width: 100%;
 
+    ${({ children }) =>
+      children.props.focus
+        ? css`
+            border: 2px solid var(--color-main-blue);
+          `
+        : css`
+            border: 2px solid transparent;
+          `}
+
     @media (max-width: 32rem) {
       display: grid;
       background: none;
@@ -25,6 +34,26 @@ export const Container = styled.div`
       height: fit-content;
       box-shadow: none;
       overflow: initial;
+
+      ${({ children }) =>
+        children.props.focus
+          ? css`
+              border: 0;
+            `
+          : css`
+              border: 0;
+            `}
+
+      > input {
+        ${({ children }) =>
+          children.props.focus
+            ? css`
+                border-bottom: 3px solid var(--color-main-blue);
+              `
+            : css`
+                border-bottom: 3px solid transparent;
+              `}
+      }
     }
   }
 `;

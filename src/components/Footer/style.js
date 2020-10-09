@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.footer`
   background-color: var(--color-main-orange);
@@ -40,6 +40,7 @@ export const Container = styled.footer`
       padding: 0 3rem;
       margin: 0;
       height: fit-content;
+      border: 0;
 
       > span {
         color: var(--color-light-white);
@@ -52,6 +53,11 @@ export const Container = styled.footer`
       > input {
         background: var(--color-light-white);
         border-radius: 0.2rem;
+        border-bottom: 3px solid transparent;
+
+        &:focus {
+          border-bottom: 3px solid var(--color-main-blue);
+        }
       }
 
       > button {
@@ -59,6 +65,18 @@ export const Container = styled.footer`
         background-color: var(--color-main-blue);
         border-radius: 0.2rem;
         margin: 0;
+        transition: 0.5s background-color;
+
+        ${({ loading }) =>
+          loading &&
+          css`
+            cursor: initial;
+            background-color: var(--color-seed) !important;
+          `}
+
+        &:hover {
+          background-color: var(--color-hover-blue);
+        }
       }
     }
   }
