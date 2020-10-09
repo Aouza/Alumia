@@ -71,7 +71,8 @@ export const Container = styled.footer`
           loading &&
           css`
             cursor: initial;
-            background-color: var(--color-seed) !important;
+            background-color: var(--color-border) !important;
+            color: var(--color-hover-blue);
           `}
 
         &:hover {
