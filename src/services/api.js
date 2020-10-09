@@ -3,6 +3,12 @@ import PerfilImageTwo from "../assets/images/perfil-2.jpg";
 import PerfilImageThree from "../assets/images/perfil-3.jpg";
 import PerfilImageFour from "../assets/images/perfil-4.jpg";
 
+import axios from "axios";
+
+export const mailApi = axios.create({
+  baseURL: "https://alumia-mail.herokuapp.com/",
+});
+
 export const menuItems = [
   { value: "Alumia" },
   { value: "Objetivo" },

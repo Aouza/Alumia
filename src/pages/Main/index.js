@@ -1,7 +1,7 @@
 import React from "react";
 import { FaClock, FaCalendarCheck, FaSeedling } from "react-icons/fa";
 import Teachers from "../../components/Teachers";
-import Form from "../../components/Form";
+import FormMail from "../../components/FormMail";
 import LearningImage from "../../assets/images/learning-svg.svg";
 import EmailField from "../../components/EmailField";
 import IconsInfo from "../../components/IconsInfo";
@@ -16,6 +16,7 @@ import {
   CourseResume,
   Details,
   Discipline,
+  TeachersWrapper,
 } from "./style";
 import ContentDiscipline from "../../components/ContentDiscipline";
 
@@ -51,20 +52,13 @@ const Main = () => {
             desenvolvimento de sistemas, e conta, ainda, com professores
             altamente qualificados.
           </p>
-          <div>
+          <TeachersWrapper>
             {teachers.map(({ name, photo }) => (
               <Teachers key={name} photo={photo} name={name} />
             ))}
-          </div>
+          </TeachersWrapper>
 
-          <Form>
-            <h3>Fique por dentro</h3>
-            <p>
-              Você não pode ficar de fora das nossas promoções, dicas e
-              novidades. <br />
-              Queremos estar cada vez mais perto de você!
-            </p>
-          </Form>
+          <FormMail />
         </Wrapper>
       </CourseResume>
 

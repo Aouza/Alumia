@@ -39,6 +39,7 @@ ul{
 }
 
 :root{
+    --color-error-message: #ff5b5b;
     --color-main-orange: #f15a22; 
     --color-opacity-orange: #f15a2210;
     --color-opacity-orange-medium: #f15a2250;

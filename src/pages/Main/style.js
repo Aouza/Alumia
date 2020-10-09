@@ -33,6 +33,20 @@ export const Calling = styled.div`
     padding-bottom: 5rem;
   }
 
+  > div > form {
+    overflow: initial;
+    position: relative;
+
+    > span {
+      position: absolute;
+      bottom: -35px;
+
+      @media (max-width: 42rem) {
+        position: initial;
+      }
+    }
+  }
+
   > h1 {
     color: var(--color-main-blue);
     font-size: 4rem;
@@ -41,6 +55,7 @@ export const Calling = styled.div`
   > h3 {
     font-size: 1.4rem;
     line-height: 1.6;
+    margin-bottom: 0.6rem;
   }
 
   > p {
@@ -102,6 +117,7 @@ export const CourseResume = styled.div`
     > p {
       grid-area: resume;
       margin-right: 5rem;
+      line-height: 1.5;
 
       @media (max-width: 72rem) {
         margin: 0;
@@ -113,25 +129,25 @@ export const CourseResume = styled.div`
       }
     }
 
-    > form {
+    > div:last-child {
       grid-area: form;
     }
+  }
+`;
 
-    > div {
-      grid-area: teachers;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      padding: 2rem 2rem 2rem 0;
+export const TeachersWrapper = styled.div`
+  grid-area: teachers;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem 2rem 0 0;
 
-      @media (max-width: 72rem) {
-        padding: 2rem 0;
-      }
+  @media (max-width: 72rem) {
+    padding: 2rem 0;
+  }
 
-      @media (max-width: 42rem) {
-        grid-template-columns: 1fr 1fr;
-        text-align: center;
-      }
-    }
+  @media (max-width: 42rem) {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
   }
 `;
 

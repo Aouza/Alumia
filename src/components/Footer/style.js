@@ -22,36 +22,44 @@ export const Container = styled.footer`
     }
   }
 
-  & > div > form {
-    display: grid;
-    background: none;
-    box-shadow: none;
-    border-radius: initial;
-    width: 100%;
-    padding: 0 3rem;
-    margin: 0;
-    height: fit-content;
-
+  & > div > div {
     @media (max-width: 72rem) {
       grid-column: 1 / 4;
-      padding: 0;
     }
 
     @media (max-width: 42rem) {
       grid-column: initial;
     }
 
-    > input {
-      background: var(--color-light-white);
-      margin-bottom: 0.3rem;
-      border-radius: 0.2rem;
-    }
-
-    > button {
+    > form {
+      display: grid;
+      background: none;
+      box-shadow: none;
+      border-radius: initial;
       width: 100%;
-      background-color: var(--color-main-blue);
-      border-radius: 0.2rem;
+      padding: 0 3rem;
       margin: 0;
+      height: fit-content;
+
+      > span {
+        color: var(--color-light-white);
+      }
+
+      @media (max-width: 72rem) {
+        padding: 0;
+      }
+
+      > input {
+        background: var(--color-light-white);
+        border-radius: 0.2rem;
+      }
+
+      > button {
+        width: 100%;
+        background-color: var(--color-main-blue);
+        border-radius: 0.2rem;
+        margin: 0;
+      }
     }
   }
 `;

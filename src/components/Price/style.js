@@ -6,6 +6,20 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  > div > form {
+    overflow: initial;
+    position: relative;
+
+    > span {
+      position: absolute;
+      bottom: -35px;
+
+      @media (max-width: 42rem) {
+        position: initial;
+      }
+    }
+  }
+
   @media (max-width: 72rem) {
     margin-bottom: 2rem;
   }

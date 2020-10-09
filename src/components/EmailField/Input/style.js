@@ -7,7 +7,6 @@ export const Container = styled.input`
 
   @media (max-width: 32rem) {
     background: var(--color-border);
-    margin-bottom: 0.3rem;
     border-radius: 0.2rem;
   }
 `;

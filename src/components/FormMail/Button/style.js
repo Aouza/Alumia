@@ -5,5 +5,5 @@ export const Container = styled.button`
   padding: 1rem;
   color: var(--color-light-white);
   border-radius: 0.2rem;
-  margin-top: 0.6rem;
+
 `;

@@ -35,6 +35,8 @@ export const Container = styled.div`
   > p {
     color: var(--color-main-blue);
     padding: 0 4rem;
+    font-weight: 700;
+    font-size: 1.1rem;
 
     @media (max-width: 72rem) {
       padding: 0 2.4rem 0 0.8rem;
