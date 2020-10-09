@@ -4,7 +4,7 @@ import { useField } from "@unform/core";
 import { Container } from "./style";
 import ErrorMessage from "../../ErrorMessage";
 const Input = ({ name, ...props }) => {
-  const { fieldName, registerField, defaultValue, error } = useField(name);
+  const { fieldName, registerField, error } = useField(name);
 
   const inputRef = useRef(null);
 
